@@ -1,0 +1,27 @@
+package cucumber.features.steps;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class restassuredStep {
+
+	@When("^user makes an API call then they get a valid status code back$")
+	public void verifyValid_APICall()
+	{
+		assert(true);
+	}
+
+	@When("^I submit an API call$")
+	public void whenISubmitAnAPICall()
+	{
+		assert(true);
+	}
+	
+	@Then("^I should get a valid response of: '(.*)'$")
+	public void ThenIShouldGetAValidResponse(String val)
+	{
+		System.out.println("Request is: " + val);
+		assert(true);
+	}
+	
+}

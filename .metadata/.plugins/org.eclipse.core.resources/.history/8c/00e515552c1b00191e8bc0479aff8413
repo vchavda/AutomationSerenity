@@ -1,0 +1,14 @@
+package restAssured;
+
+import net.serenitybdd.rest.SerenityRest;
+
+public class RestAssuredUtils {
+
+	public String makeAPICall()
+	{
+		SerenityRest.given().
+		spec(ReusableSpecifications.getGenericRequestSpec()).
+		return null;
+	}
+	
+}

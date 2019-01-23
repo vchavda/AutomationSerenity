@@ -1,0 +1,13 @@
+Feature: Testing different features 
+
+@vijay 
+Scenario: Check the API call returns 200 
+	When user makes an API call then they get a valid status code back 
+	
+Scenario Outline: pop 
+	When I submit an API call 
+	Then I should get a valid response of: '200' 
+	
+	Examples: 
+	|	value		|
+	|	200			|

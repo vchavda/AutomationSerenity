@@ -1,0 +1,14 @@
+package restAssured;
+
+public class ReusableSpecifications {
+	public static RequestSpecBuilder rspec;
+	public static RequestSpecification requestSpecBuilder;
+
+	public static RequestSpecification getGenericRequestSpec() {
+
+		rspec = new RequestSpecBuilder();
+		rspec.setContentType(ContentType.JSON);
+		requestSpecBuilder = rspec.build();
+		return requestSpecBuilder;
+	}
+}

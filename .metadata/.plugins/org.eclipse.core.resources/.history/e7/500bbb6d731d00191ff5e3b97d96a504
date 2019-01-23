@@ -1,0 +1,29 @@
+package Utilities;
+
+import java.util.HashMap;
+
+import org.hibernate.validator.internal.util.logging.LoggerFactory;
+import org.slf4j.Logger;
+
+public final class ParamsBuilder {
+	
+	static Logger logger = LoggerFactory.getLogger(ParamsBuilder.class);
+	
+	private static final HashMap<String, String> paramsBuilder = new HashMap<String, String>();
+
+	public static void addParams(String key, String value)
+	{
+		paramsBuilder.put(key, value);
+	}
+
+	public static Integer getSize() {
+		return paramsBuilder.size();
+	}
+	
+	public static void clear() {
+		logger.info("");
+		paramsBuilder.clear();
+	}
+	
+	
+}

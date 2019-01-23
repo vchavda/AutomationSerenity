@@ -1,0 +1,10 @@
+package Utilities;
+
+import java.util.HashMap;
+
+public final class ParamsBuilder {
+	
+	private static final HashMap<String, String> paramsBuilder = new HashMap<>();
+	
+
+}

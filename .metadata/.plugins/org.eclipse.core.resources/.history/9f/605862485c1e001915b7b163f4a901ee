@@ -1,0 +1,38 @@
+package Utilities;
+
+import io.restassured.path.json.JsonPath;
+
+public class JsonUtils {
+	
+	
+	public JsonUtils() {
+		super();
+	}
+	
+	public Boolean isValueInResponse(String node, String value, String response)
+	{
+		
+		JsonPath path = new JsonPath(response);
+		if (value.contains(","))
+		{
+		
+			String[] values = value.split(",");
+			String[] nodes = node.split(",");
+			for (int i = 0; i < nodes.length; i++ ) {
+				if (!path.get(nodes[i]).toString().contains(values[i])) {
+					return false;
+				}
+			}
+			return true;
+		}else if (value.contains("'")){
+			return value.replace("'", "").equals(path.get(node).toString());			
+		}else {
+			
+		}
+		
+		
+		return null;
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunCukesIT (1)" project="AutomationSerenity" tests="5" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="cucumber.RunCukesIT" incomplete="true">
+    <testsuite name="Feature: Testing different features" incomplete="true">
+      <testsuite name="Scenario: Check the API call returns 200" time="10.93">
+        <testcase name="When user makes an API call then they get a valid status code back" classname="Scenario: Check the API call returns 200" time="10.93"/>
+      </testsuite>
+      <testsuite name="Scenario Outline: response code is validated when an API call is made" incomplete="true">
+        <testsuite name="Examples:" incomplete="true">
+          <testsuite name="| 200 | name | [Churchgate] |" incomplete="true">
+            <testcase name="Given I submit dynamic query parameters" classname="| 200 | name | [Churchgate] |" time="0.007"/>
+            <testcase name="When I submit an API call" classname="| 200 | name | [Churchgate] |" incomplete="true"/>
+            <testcase name="Then I should get a valid response of: '200'" classname="| 200 | name | [Churchgate] |" incomplete="true"/>
+            <testcase name="And the response should contain this 'name' and '[Churchgate]'" classname="| 200 | name | [Churchgate] |" incomplete="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

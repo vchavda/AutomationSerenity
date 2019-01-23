@@ -1,0 +1,24 @@
+package restAssured;
+
+import net.serenitybdd.rest.SerenityRest;
+import io.restassured.RestAssured;
+import io.restassured.response.ExtractableResponse;
+import io.restassured.response.Response;
+
+public class RestAssuredUtils {
+
+	public int makeAPICall()
+	{
+		Response response = 
+		SerenityRest.given().
+		spec(ReusableSpecifications.getGenericRequestSpec()).
+		   when().
+           get("/maps/api/place/textsearch/json?query=Churchgate&key=AIzaSyBrhdZP1wWpMXVEvzpY4-3W-FKieCYhVXg").
+        then().
+           extract().response();
+		
+		return response.getStatusCode();
+	}
+	
+}
+	

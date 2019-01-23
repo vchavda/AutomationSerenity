@@ -1,0 +1,31 @@
+package Utilities;
+
+import java.util.HashMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public final class ParamsBuilder {
+	
+	static Logger logger = LoggerFactory.getLogger(ParamsBuilder.class);
+	
+	private static final HashMap<String, String> paramsBuilder = new HashMap<String, String>();
+
+	public static void addParams(String key, String value)
+	{
+		paramsBuilder.put(key, value);
+	}
+
+	public static Integer getSize() {
+		return paramsBuilder.size();
+	}
+	
+	public static void clear() {
+		logger.info("");
+		paramsBuilder.clear();
+	}
+	
+	public static Map<String, string> getParam() {
+		return paramsBuilder;
+	}
+	
+}
